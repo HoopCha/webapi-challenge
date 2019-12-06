@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is a web application framework that works on top of node.js its like react but for back end. Express allows us to easily use middleware
+
 - [ ] Describe Middleware?
+
+an easy way to add modularity to the code, it adds features, and are like an array of functions that get executed in the order they are introduced. 
 
 - [ ] Describe a Resource?
 
+Everything is a resouce! at least in restful web apis. an object with associated data, sets of methods that operate on it, etc. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Different Codes, like 200! or 201! or the data that was sent in. somethign to say it was succesful. 
+
 - [ ] How can we partition our application into sub-applications?
+
+With Routers!. This makes it more modular and easier ot maintain and reason about. 
 
 ## Minimum Viable Product
 
