@@ -1,6 +1,7 @@
 const express = require("express");
 
-//const userRouter = require("./users/userRouter");
+const projectRouter = require("./routers/projectRouter");
+const actionRouter = require('./routers/actionRouter.js');
 
 const server = express();
 
@@ -9,10 +10,10 @@ server.get("/", (req, res) => {
   res.send(`<h2>This is my Sanity Check!</h2>`);
 });
 
-//custom middleware
-
+//middleware
 server.use(express.json());
 
-//server.use("/api/users", userRouter);
+server.use("/api/actions", actionRouter);
+server.use("/api/project", projectRouter);
 
 module.exports = server;
