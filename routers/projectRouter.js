@@ -33,6 +33,22 @@ router.get("/:id", validateProjectId, (req, res) => {
       });
   });
 
+  //GET ALL ACTIONS
+router.get("/:id/actions", validateProjectId, (req, res) => {
+  projectDB
+    .getProjectActions(req.params.id)
+    .then(project => {
+      res.status(200).json(project);
+    })
+    .catch(error => {
+      console.log("get error", error);
+      res
+      .status(500)
+        .json({error: "There was an error retrieving the project actions from the database."
+        });
+    });
+});
+
 //UPDATE
 router.put("/:id", validateProjectId, validateProjectInfo, (req, res) => {
     projectDB
